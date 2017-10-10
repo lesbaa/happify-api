@@ -1,0 +1,11 @@
+[
+  {
+    "success": true,
+    "message": "query successful!",
+    "data": {
+      "id": "1a3e4dff590",
+      "nasty": "murdered",
+      "nice": "hugged" 
+    }
+  }
+]
