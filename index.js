@@ -38,16 +38,16 @@ app.use('*', (req, res, next) => {
 })
 
 router.route('/sub/nice/:nasty')
-  .get( /* express middleware for get nasty, given nice */)
+  .get(getNiceGivenNasty)
 
 router.route('/sub/nasty/:nice')
-  .get( /* express middleware for get nice, given nasty */)
+  .get(getNastyGivenNice)
 
 router.route('/sub/:nasty/:nice')
-  .post( /* express middleware add new sub */ )
+  .post(postNewSub)
 
 router.route('/subs')
-  .post( /* express middleware get all subs, with limit and offset */ )
+  .get(getAllSubs)
 
 app.use('/v1', router)
 
