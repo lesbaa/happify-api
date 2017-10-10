@@ -40,24 +40,24 @@ app.use('*', (req, res, next) => {
 })
 
 router.route('/sub/nice/:nasty')
-  .get(getNiceGivenNasty)
+  .get(getNiceGivenNasty) // middleware is currently empty in this one
 
 router.route('/sub/nasty/:nice')
-  .get(getNastyGivenNice)
+  .get(getNastyGivenNice) // middleware is currently empty in this one
 
 router.route('/sub/:nasty/:nice')
-  .post(postNewSub)
+  .post(postNewSub) // middleware is currently empty in this one
 
 router.route('/sub/:id')
-  .get(getSubGivenId)
-  .delete(deleteSub)
+  .get(getSubGivenId) // example in here of mongoose query
+  .delete(deleteSub) // middleware is currently empty in this one
 
 router.route('/subs')
-  .get(getAllSubs)
+  .get(getAllSubs) // middleware is currently empty in this one
 
 
 app.use('/v1', router)
 
 app.listen(port, () => {
-  console.log(`> app listening on port ${port}`)
+  console.log(`> app listening on port ${port}, yay!`)
 })

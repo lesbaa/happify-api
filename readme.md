@@ -14,3 +14,6 @@ GET `sub/happy/` : gets the nasty equivalent of a nice phrase
 GET `sub/nasty/` : gets the nice equivalent of a nasty phrase
 
 that's it.  Now go and make things seem happier.
+
+[mongoose docs](http://mongoosejs.com/docs/guide.html)
+[express docs](https://expressjs.com/en/4x/api.html)
