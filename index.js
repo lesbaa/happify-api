@@ -30,6 +30,8 @@ const {
   getNastyGivenNice,
   getAllSubs,
   postNewSub,
+  getSubGivenId,
+  deleteSub,
 } = require('./modules/middleware')
 
 app.use('*', (req, res, next) => {
@@ -46,8 +48,13 @@ router.route('/sub/nasty/:nice')
 router.route('/sub/:nasty/:nice')
   .post(postNewSub)
 
+router.route('/sub/:id')
+  .get(getSubGivenId)
+  .delete(deleteSub)
+
 router.route('/subs')
   .get(getAllSubs)
+
 
 app.use('/v1', router)
 
