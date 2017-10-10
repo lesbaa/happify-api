@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
+const router = express.Router()
 
 console.log('starting server...')
 
@@ -20,7 +21,6 @@ app.use(allowCrossDomain)
 app.use(bodyParser.urlencoded({ extended: true, limit: '5mb' }))
 app.use(bodyParser.json({ limit: '5mb' }))
 
-
 /*
  *  API Routing
  */
@@ -28,3 +28,4 @@ app.use('/', (req, res, next) => {
   res.setHeader('X-Powered-By', 'Happify API V1')
   next()
 })
+
