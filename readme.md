@@ -5,7 +5,7 @@ An api to help make the bad things go away, or at least look a bit better.  Buil
 
 ** Routes / Usage
 
-POST `sub/\[nasty-stuff\]/\[nice-stuff\]` : adds a new substitution to the list
+POST `sub/[nasty-stuff]/[nice-stuff]` : adds a new substitution to the list
 
 GET `subs/` : gets all currently listed substitutions
 GET `sub/happy/` : gets the nasty equivalent of a nice phrase
