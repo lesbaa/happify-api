@@ -8,7 +8,9 @@ An api to help make the bad things go away, or at least look a bit better.  Buil
 POST `sub/[nasty-stuff]/[nice-stuff]` : adds a new substitution to the list
 
 GET `subs/` : gets all currently listed substitutions
+
 GET `sub/happy/` : gets the nasty equivalent of a nice phrase
+
 GET `sub/nasty/` : gets the nice equivalent of a nasty phrase
 
 that's it.  Now go and make things seem happier.
