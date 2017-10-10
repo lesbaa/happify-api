@@ -24,6 +24,6 @@ DELETE `sub/[id]`: delete a current sub <= not built yet
 
 that's it.  Now go and make things seem happier.
 
-[mongoose docs](http://mongoosejs.com/docs/guide.html)
-[express docs](https://expressjs.com/en/4x/api.html)
-[mongodb](https://docs.mongodb.com/manual/)
+[mongoose docs](http://mongoosejs.com/docs/guide.html) |
+[express docs](https://expressjs.com/en/4x/api.html) |
+[mongodb docs](https://docs.mongodb.com/manual/)
