@@ -1,0 +1,14 @@
+Happify - API v1
+================
+
+An api to help make the bad things go away, or at least look a bit better.  Built on express and mongodb.
+
+** Routes / Usage
+
+POST sub/<nasty-stuff>/<happy-stuff> : adds a new substitution to the list
+
+GET subs/ : gets all currently listed substitutions
+GET sub/happy/ : gets the nasty equivalent of a happy phrase
+GET sub/nasty/ : gets the happy equivalent of a nasty phrase
+
+that's it.  Now go and make things seem happier.

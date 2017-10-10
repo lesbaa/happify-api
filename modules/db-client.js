@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const dbName = 'db'
 const models = {}
 const modelsList = [
-  'sub'
+  'Sub'
 ]
 
 /*
