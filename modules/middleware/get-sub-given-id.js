@@ -1,6 +1,13 @@
 const dbClient = require('../db-client')
 const middlewareFunc = (req, res, next) => {
-  console.log(dbClient)
+  if (!req.params || !req.params.id) {
+    res.status(400)
+    res.json({
+      succes: false,
+      message: `bad request sucka!`
+    })
+    return
+  }
   const { id } = req.params // taken from the :id bit in the route
   dbClient.Sub.findOne(
     { id }, // the criteria for the db query

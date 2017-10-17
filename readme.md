@@ -10,13 +10,13 @@ An api to help make the bad things go away, or at least look a bit better.  Buil
 
 ** Routes
 
-POST `sub/[nasty-stuff]/[nice-stuff]` : adds a new substitution to the list <= not built yet
+POST `sub/`, json payload in the form `{ "nasty": "murdered", "nice": "tickled"  }` : adds a new substitution to the list
 
 GET `subs/` : gets all currently listed substitutions <= not built yet
 
-GET `sub/happy/[nasty-phrase]` : gets the nasty equivalent of a nice phrase <= not built yet
+GET `sub/nice/`, json payload `{"nasty": "murdered"}` : gets the nice equivalent of a nasty phrase <= not built yet
 
-GET `sub/nasty/[nice-phrase]` : gets the nice equivalent of a nasty phrase <= not built yet
+GET `sub/nice/`, json payload `{"nice": "tickled"}` : gets the nice equivalent of a nasty phrase <= not built yet
 
 GET `sub/[id]`: get sub with given id
 

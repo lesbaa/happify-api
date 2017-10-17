@@ -35,7 +35,7 @@ const {
 } = require('./modules/middleware')
 
 app.use('*', (req, res, next) => {
-  res.setHeader('X-Powered-By', 'Happify-API-V1')
+  res.setHeader('X-Powered-By', 'Good News, Everyone! API V1')
   next()
 })
 
@@ -45,7 +45,7 @@ router.route('/sub/nice/:nasty')
 router.route('/sub/nasty/:nice')
   .get(getNastyGivenNice) // middleware is currently empty in this one
 
-router.route('/sub/:nasty/:nice')
+router.route('/sub/submit')
   .post(postNewSub) // middleware is currently empty in this one
 
 router.route('/sub/:id')
@@ -55,6 +55,14 @@ router.route('/sub/:id')
 router.route('/subs')
   .get(getAllSubs) // middleware is currently empty in this one
 
+router.route('*')
+  .get((req, res) => {
+    res.status(200)
+    res.json({
+      success: true,
+      message: 'Welcome to \'Good News, Everyone!\' API v1.0',
+    })
+  })
 
 app.use('/v1', router)
 
