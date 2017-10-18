@@ -1,6 +1,6 @@
 const dbClient = require('../db-client')
 const hash = require('string-hash')
-
+// TODO, tidy this up, async await it les.
 const middlewareFunc = (req, res, next) => {
   req.body
   if (!req.body || !req.body.nasty || !req.body.nice) {
@@ -8,7 +8,7 @@ const middlewareFunc = (req, res, next) => {
     res.json({
       success: false,
       message: `bad request, not enough fields!`
-    }) // express repsonse object, .json() sends repsonse as json data, (duh)
+    }) 
     return
   }
   const {
@@ -39,14 +39,14 @@ const middlewareFunc = (req, res, next) => {
           res.json({
             success: false,
             message: `bad request, entry already exists!`
-          }) // express repsonse object, .json() sends repsonse as json data, (duh)
+          })
           return
         } else {
           res.status(500)
           res.json({
             success: false,
             message: `internal server error!`
-          }) // express repsonse object, .json() sends repsonse as json data, (duh)
+          })
           return
         }
       }
