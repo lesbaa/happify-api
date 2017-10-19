@@ -5,7 +5,7 @@ const router = express.Router()
 
 console.log('starting server...')
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 65437
 
 const allowCrossDomain = (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
